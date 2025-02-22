@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/utils.css">
+<div class="home-container">
+<h1>Home Page</h1>
+<button id='logout'>Log Out</button>
+</div>
+<script>
+    const logoutBtn = document.getElementById('logout')
+    logoutBtn.addEventListener('click', async()=>{
+    const logout = await fetch('/logout')
+    console.log("Logged out the user (frontend log)")
+    window.location = "/"
+})
+</script>
